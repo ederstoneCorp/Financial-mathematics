@@ -21,7 +21,8 @@ Then visit `http://localhost:8000`.
 - Seven interactive calculators for simple interest, compound accumulation/present value, nominal-to-effective conversion, annuities, monthly loan amortisation, sinking funds and continuous payment streams
 - Loan repayment schedule with monthly interest, principal and outstanding balance
 - Formula reference, learning pathway, local progress tracking and an eight-question knowledge check
-- A 25-minute, 20-mark exam simulator with answer navigation, automatic submission, worked explanations, saved in-progress attempts and a locally stored best score
+- Untimed topic-based practice: learners choose one of the 10 course topics and work through topic-specific questions at their own pace
+- Floating calculator available throughout the learning platform, with selectable simple-interest, compound-interest, rate-conversion, annuity, loan, sinking-fund and continuous-stream models
 - Expanded `STUDY_GUIDE.md` with derivations, worked examples and practice checkpoints
 - `PRACTICE_BANK.md` with 20 original graded questions and worked solutions
 - `COURSE_SCOPE.md` with the working topic map and CT1 filtering decisions
@@ -48,5 +49,5 @@ The platform does not reproduce the ActEd pack or its question bank. Explanation
 1. Reconcile the working module list with the official JKUAT course outline and lecturer's teaching sequence.
 2. Expand each module with more worked examples, derivations, visual timelines and targeted exercises.
 3. Add interactive cashflow timelines, annuity visualisations and growth charts.
-4. Expand the exam simulator with additional original question sets, mixed question formats and lecturer-aligned mark schemes.
+4. Expand the topic question bank with additional original questions, mixed question formats and lecturer-aligned mark schemes.
 5. Validate every numerical example and calculator against independently calculated test cases.
