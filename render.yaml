@@ -1,0 +1,8 @@
+# Render Blueprint for the SMA 2207 Financial Mathematics I static learning platform
+services:
+  - type: web
+    name: sma2207-financial-mathematics
+    runtime: static
+    buildCommand: echo "No build step required for this static site"
+    staticPublishPath: .
+    autoDeploy: true
