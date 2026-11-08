@@ -193,7 +193,7 @@ The new instalment is then
 R_{new}=\frac{L_{12}(0.012)}{1-(1.012)^{-12}}.
 \]
 
-Substitution gives a revised monthly payment of approximately **KSh 5,715.50**. Keep the unrounded original instalment and balance in the calculation.
+Substitution gives a revised monthly payment of approximately **KSh 5,720.45**. Keep the unrounded original instalment and balance in the calculation.
 
 ## Level 5 — Force of interest and continuous payments
 
