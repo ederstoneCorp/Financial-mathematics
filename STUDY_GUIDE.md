@@ -123,7 +123,7 @@ PV=15,000(1.10)^{-2}=\boxed{\text{KSh }12,396.69}.
 2. Find the present value of KSh 30,000 due in 3 years at 8% effective.
 3. Find the simple-interest accumulation of KSh 50,000 for 18 months at 12% p.a.
 
-**Answers:** (1) KSh 94,686.19 (approximately). (2) KSh 23,815.73 (approximately). (3) KSh 59,000.
+**Answers:** (1) KSh 94,685.77 (approximately). (2) KSh 23,814.97 (approximately). (3) KSh 59,000.
 
 ---
 
@@ -265,7 +265,7 @@ A(s,t)=\exp\left(\int_s^t\delta(u)\,du\right).
 2. Find the nominal annual rate convertible quarterly equivalent to 8% effective annual interest.
 3. Find the force of interest equivalent to 6% effective annual interest.
 
-**Answers:** (1) \((1+0.09/12)^{12}-1\), approximately 9.3807%. (2) \(4((1.08)^{1/4}-1)\), approximately 7.769%. (3) \(\ln(1.06)\), approximately 5.826%.
+**Answers:** (1) \((1+0.09/12)^{12}-1\), approximately 9.3807%. (2) \(4((1.08)^{1/4}-1)\), approximately 7.7706%. (3) \(\ln(1.06)\), approximately 5.826%.
 
 ---
 
@@ -351,7 +351,7 @@ X=10,000(1.10)+12,000=\boxed{\text{KSh }23,000}.
 
 A person receives KSh 8,000 in one year and KSh 12,000 in three years. Find the present value at 8% effective annually.
 
-**Answer:** \(8,000/1.08+12,000/1.08^3\), approximately KSh 16,219.97.
+**Answer:** \(8,000/1.08+12,000/1.08^3\), approximately KSh 16,933.39.
 
 ---
 
@@ -429,7 +429,7 @@ If i = 0, do not divide by i in the annuity formula. The present value and accum
 2. Find the present value of KSh 3,000 paid at the beginning of each year for 4 years at 8%.
 3. Find the present value of a perpetuity-immediate paying KSh 1,200 per year at 6%.
 
-**Answers:** (1) \(2,000((1.05)^6-1)/0.05\), approximately KSh 13,601.91. (2) \(3,000(1.08)a_{\overline4|0.08}\), approximately KSh 10,430. (3) KSh 20,000.
+**Answers:** (1) \(2,000((1.05)^6-1)/0.05\), approximately KSh 13,603.83. (2) \(3,000(1.08)a_{\overline4|0.08}\), approximately KSh 10,731.29. (3) KSh 20,000.
 
 ---
 
@@ -498,7 +498,7 @@ If the interest rate changes after payment k, first determine the outstanding ba
 
 A loan of KSh 60,000 is repaid by 12 equal monthly instalments at 1% effective per month. Find the instalment.
 
-**Answer:** \(60,000(0.01)/(1-1.01^{-12})\), approximately KSh 5,332.93.
+**Answer:** \(60,000(0.01)/(1-1.01^{-12})\), approximately KSh 5,330.93.
 
 ---
 
