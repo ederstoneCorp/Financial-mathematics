@@ -26,6 +26,8 @@
 <div class="navlabel">Study tools</div>
 <button data-view="roadmap"><span class="ico">⌁</span>Learning pathway</button>
 <button data-view="sources"><span class="ico">▧</span>Scope & sources</button>
+<button data-view="exam"><span class="ico">◷</span>Timed exam simulator</button>
+
 </nav>
 <div class="sidefoot">A structured learning environment for JKUAT SMA 2207.<br><br>Progress is saved locally in this browser.</div>
 </aside>
@@ -47,6 +49,54 @@
 <section class="view" id="view-formula"><div class="eyebrow">Quick reference</div><h2>Formula reference</h2><p class="muted">A compact reference for the principal relationships used in the learning modules.</p><div class="grid two" id="formulaCards"></div></section>
 <section class="view" id="view-roadmap"><div class="eyebrow">Study sequence</div><h2>Learning pathway</h2><p class="muted">Build the foundations before moving to streams of payments and financial applications.</p><div class="card"><div id="roadmapList"></div></div></section>
 <section class="view" id="view-sources"><div class="eyebrow">Academic scope</div><h2>Scope, source and content policy</h2><div class="card"><h3>Expanded learning materials</h3><p class="muted">The expanded study guide contains derivations, original worked examples, practice checkpoints and exam-method guidance. The practice bank contains 20 original questions with worked solutions, arranged by difficulty.</p><div class="actions"><a class="btn primary" href="https://github.com/ederstoneCorp/Financial-mathematics/blob/main/STUDY_GUIDE.md" target="_blank" rel="noopener">Open full study guide ↗</a><a class="btn" href="https://github.com/ederstoneCorp/Financial-mathematics/blob/main/PRACTICE_BANK.md" target="_blank" rel="noopener">Open 20-question practice bank ↗</a><a class="btn" href="https://github.com/ederstoneCorp/Financial-mathematics/blob/main/COURSE_SCOPE.md" target="_blank" rel="noopener">View course scope map ↗</a></div><h3>Primary reference pack</h3><p class="muted">The supplied 800-page PDF is an ActEd Combined Materials Pack for Subject CT1 (2013): Study Guide, Course Notes, Question and Answer Bank and assignments. It is a supporting reference, not the JKUAT syllabus.</p><h3>How the pack is filtered</h3><p>For the current build, relevant foundational material is drawn from the CT1 cashflow, time-value, interest-rate, discounting, annuity and loan chapters, with security valuation material treated selectively where it supports the working course scope.</p><ul><li>Chapter 1: Cashflow models.</li><li>Chapter 2: The time value of money.</li><li>Chapter 3: Interest rates.</li><li>Chapter 4: Real and money interest rates.</li><li>Chapter 5: Discounting and accumulating.</li><li>Chapters 6–7: Annuities and varying annuities.</li><li>Chapter 8: Equations of value.</li><li>Chapter 9: Loan schedules.</li><li>Chapter 10: Project appraisal is excluded from the core unless confirmed by the lecturer.</li><li>Chapters 11–12: Only simple/effective investment-return calculations are considered where supported by course questions; full security pricing is not part of the core build.</li></ul><div class="callout">The working topic list is informed by previously discussed SMA 2207 topics and publicly available JKUAT past-paper questions. The PDF itself is an actuarial CT1 pack and does not establish JKUAT examinability. Inflation-adjusted valuation and other CT1 material not evidenced in the course questions remain supplementary pending the lecturer’s outline.</div><h3>Copyright and originality</h3><p class="muted">This platform uses original explanations, newly written examples and independently implemented calculators. It does not reproduce the ActEd pack or its question bank verbatim.</p><h3>Academic accuracy</h3><p class="muted">Check the assumptions on every problem: payment timing, compounding frequency, rate basis, number of periods and valuation date. A correct formula applied with inconsistent units gives a wrong answer.</p></div></section>
+
+<section class="view" id="view-exam">
+<div class="eyebrow">Assessment mode · Original questions</div>
+<h2>Timed exam simulator</h2>
+<p class="muted">A 25-minute, 20-mark practice assessment. Questions are original and based on the platform's working SMA 2207 scope. This is practice, not an official JKUAT examination.</p>
+<div class="grid two">
+<div class="card">
+<h3>Assessment settings</h3>
+<div class="grid stats" style="grid-template-columns:repeat(3,minmax(0,1fr));margin:14px 0">
+<div class="stat"><small>Duration</small><strong style="font-size:21px">25 min</strong></div>
+<div class="stat"><small>Questions</small><strong style="font-size:21px">10</strong></div>
+<div class="stat"><small>Total marks</small><strong style="font-size:21px">20</strong></div>
+</div>
+<p class="muted">Each question carries 2 marks. You can move between questions, change answers before submission, and review the explanations after marking.</p>
+<button class="btn primary" id="examStart">Start new attempt</button>
+<button class="btn" id="examResume" style="display:none">Resume saved attempt</button>
+</div>
+<div class="card">
+<h3>Assessment rules</h3>
+<ul class="muted">
+<li>The timer starts when you begin or resume.</li>
+<li>Your answers are saved in this browser during the attempt.</li>
+<li>Submitting ends the attempt; the timer also submits automatically at zero.</li>
+<li>Use a calculator only where permitted by your lecturer.</li>
+<li>Read rate periods and payment timing carefully.</li>
+</ul>
+</div>
+</div>
+<div id="examWorkspace" class="card hide" style="margin-top:16px">
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap">
+<div><span class="eyebrow" id="examProgress">Question 1 of 10</span><div class="muted" id="examAnswered">0 of 10 answered</div></div>
+<div class="pill" id="examClock" aria-live="polite">25:00 remaining</div>
+</div>
+<div class="bar" style="margin:14px 0"><i id="examBar"></i></div>
+<div id="examQuestion"></div>
+<div id="examOptions"></div>
+<div class="actions" style="justify-content:space-between">
+<div class="actions"><button class="btn" id="examPrev">← Previous</button><button class="btn" id="examNext">Next →</button></div>
+<button class="btn primary" id="examSubmit">Submit assessment</button>
+</div>
+<p class="muted" style="font-size:12px">You may submit with unanswered questions. Unanswered questions receive zero marks.</p>
+</div>
+<div id="examResults" class="card hide" style="margin-top:16px"></div>
+<div class="card" style="margin-top:16px">
+<h3>Previous best result</h3><p class="muted" id="examBest">No completed attempt recorded on this browser.</p>
+</div>
+</section>
+
 <footer class="footer">SMA 2207 Financial Mathematics I · Learning platform prototype · Original explanations and interactive tools.</footer>
 </main></div>
 <script>
@@ -83,7 +133,7 @@ const calcDefs=[
 ];
 function renderCalcs(){$('calcCards').innerHTML=calcDefs.map(c=>'<div class="card" id="calc-'+c.id+'"><div class="eyebrow">CALCULATOR</div><h3>'+c.title+'</h3><p class="muted">'+c.desc+'</p>'+c.fields.map(x=>f(c.id+'-'+x[0],x[1],x[2])).join('')+'<button class="btn primary" onclick="runCalc(\''+c.id+'\')">Calculate</button><div id="out-'+c.id+'"></div></div>').join('')}
 function vals(c){const v={};c.fields.forEach(x=>v[x[0]]=Number($(c.id+'-'+x[0]).value));return v}
-function runCalc(id){const c=calcDefs.find(x=>x.id===id),v=vals(c);if(Object.values(v).some(x=>!Number.isFinite(x))||Object.values(v).some(x=>x<0)||(v.n!==undefined&&v.n===0)||(v.m!==undefined&&(!Number.isInteger(v.m)||v.m===0))){$('out-'+id).innerHTML='<div class="callout">Enter valid non-negative values. Periods and conversion frequency must be greater than zero.</div>';return}const result=c.run(v);let html='<div class="result"><span class="muted">'+c.label+'</span><strong>KSh '+result.toLocaleString('en-KE',{minimumFractionDigits:2,maximumFractionDigits:2})+'</strong>'+(c.extra?'<p class="muted">Present value: KSh '+c.extra(v).toLocaleString('en-KE',{minimumFractionDigits:2,maximumFractionDigits:2})+'</p>':'')+'</div>';if(c.table){const r=v.i/1200;let bal=v.l,pay=result,rows='';for(let k=1;k<=Math.min(v.n,120);k++){const interest=bal*r,capital=pay-interest;bal=Math.max(0,bal-capital);rows+='<tr><td>'+k+'</td><td>'+interest.toFixed(2)+'</td><td>'+capital.toFixed(2)+'</td><td>'+bal.toFixed(2)+'</td></tr>'}html+='<div class="tablewrap" style="margin-top:15px;max-height:300px;overflow:auto"><table><thead><tr><th>Month</th><th>Interest</th><th>Capital</th><th>Balance</th></tr></thead><tbody>'+rows+'</tbody></table></div>'} $('out-'+id).innerHTML=html}
+function runCalc(id){const c=calcDefs.find(x=>x.id===id),v=vals(c);if(Object.values(v).some(x=>!Number.isFinite(x))||Object.values(v).some(x=>x<0)||(v.n!==undefined&&v.n===0)||(v.m!==undefined&&(!Number.isInteger(v.m)||v.m===0))){$('out-'+id).innerHTML='<div class="callout">Enter valid non-negative values. Periods and conversion frequency must be greater than zero.</div>';return}const result=c.run(v);const isRate=id==='rates';let html='<div class="result"><span class="muted">'+c.label+'</span><strong>'+(isRate?'': 'KSh ')+result.toLocaleString('en-KE',{minimumFractionDigits:2,maximumFractionDigits:2})+(isRate?'%':'')+'</strong>'+(c.extra?'<p class="muted">Present value: KSh '+c.extra(v).toLocaleString('en-KE',{minimumFractionDigits:2,maximumFractionDigits:2})+'</p>':'')+'</div>';if(c.table){const r=v.i/1200;let bal=v.l,pay=result,rows='';for(let k=1;k<=Math.min(v.n,120);k++){const interest=bal*r,capital=pay-interest;bal=Math.max(0,bal-capital);rows+='<tr><td>'+k+'</td><td>'+interest.toFixed(2)+'</td><td>'+capital.toFixed(2)+'</td><td>'+bal.toFixed(2)+'</td></tr>'}html+='<div class="tablewrap" style="margin-top:15px;max-height:300px;overflow:auto"><table><thead><tr><th>Month</th><th>Interest</th><th>Capital</th><th>Balance</th></tr></thead><tbody>'+rows+'</tbody></table></div>'} $('out-'+id).innerHTML=html}
 function selectCalc(id){showView('calculators');setTimeout(()=>{const el=$('calc-'+id);if(el)el.scrollIntoView({behavior:'smooth',block:'center'})},100)}
 $('formulaCards').innerHTML=formulas.map(x=>'<div class="card"><div class="muted" style="font-size:12px">'+x[0]+'</div><div class="formula">'+x[1]+'</div></div>').join('');
 const questions=[
@@ -123,6 +173,57 @@ function initVisuals(){
  };
  $('drawGrowth').addEventListener('click',draw);$('drawCash').addEventListener('click',cash);draw();cash();
 }
+
+
+const examQuestions = [
+{q:'KSh 80,000 is invested at 7.5% effective interest for 4 years. Find the accumulated value.',o:['KSh 104,000.00','KSh 106,805.49','KSh 105,971.20','KSh 102,400.00'],a:1,e:'A = 80,000(1.075)^4 = KSh 106,805.49.'},
+{q:'A nominal annual rate of 12% is convertible quarterly. Find the effective annual rate.',o:['12.0000%','12.3600%','12.5509%','12.6825%'],a:2,e:'i = (1 + 0.12/4)^4 − 1 = 0.125509, or 12.5509%.'},
+{q:'Find the present value of KSh 50,000 due in 3 years at 8% effective per year.',o:['KSh 39,691.61','KSh 40,000.00','KSh 46,000.00','KSh 42,500.00'],a:0,e:'PV = 50,000/(1.08)^3 = KSh 39,691.61.'},
+{q:'The effective interest rate is 10%. What is the equivalent effective discount rate?',o:['10.0000%','9.0909%','11.0000%','8.2645%'],a:1,e:'d = i/(1+i) = 0.10/1.10 = 9.0909%.'},
+{q:'A force of interest is constant at 0.06 per year. What is the effective annual interest rate?',o:['6.0000%','6.1837%','5.8275%','6.5000%'],a:1,e:'i = e^δ − 1 = e^0.06 − 1 = 6.1837%.'},
+{q:'An annuity-immediate pays KSh 5,000 at each year-end for 5 years. The effective annual rate is 10%. Find its present value.',o:['KSh 25,000.00','KSh 18,953.93','KSh 20,000.00','KSh 22,500.00'],a:1,e:'PV = 5,000[1 − (1.10)^−5]/0.10 = KSh 18,953.93.'},
+{q:'A fund must accumulate KSh 120,000 in 24 months. Deposits are made at each month-end and earn 0.6% effective monthly. Find the deposit.',o:['KSh 5,000.00','KSh 4,663.60','KSh 4,710.25','KSh 5,240.00'],a:1,e:'R = 120,000/s_24 at 0.6% = KSh 4,663.60.'},
+{q:'A KSh 100,000 loan is repaid by 24 equal monthly payments. The nominal annual rate is 12% convertible monthly. Find the monthly payment.',o:['KSh 4,000.00','KSh 4,500.00','KSh 4,707.35','KSh 5,000.00'],a:2,e:'The monthly rate is 0.12/12 = 0.01. R = 100,000/a_24 at 1% = KSh 4,707.35.'},
+{q:'A debt of KSh 10,000 due in one year and KSh 12,000 due in two years is replaced by one payment at the end of year 2. At 10% effective, what is the replacement payment?',o:['KSh 22,000','KSh 23,000','KSh 24,100','KSh 21,000'],a:1,e:'At year 2, accumulate the first debt: 10,000(1.10) + 12,000 = KSh 23,000.'},
+{q:'A Treasury bill is bought for KSh 97,000 and redeemed for KSh 100,000 after 90 days. Using a 365-day year, what is the simple annualised return?',o:['3.09%','12.54%','11.34%','10.00%'],a:1,e:'Simple annualised return = (3,000/97,000)(365/90) = 12.54% approximately.'}
+];
+let examState=null, examTimer=null;
+function examSaved(){try{return JSON.parse(localStorage.getItem('fm_exam_attempt')||'null')}catch(e){return null}}
+function examBest(){const b=localStorage.getItem('fm_exam_best');$('examBest').textContent=b?b+'% best score recorded':'No completed attempt recorded on this browser.'}
+function examStart(resume=false){
+ let saved=examSaved();
+ if(resume&&saved){examState=saved;examState.end=Date.now()+Math.max(0,saved.remaining||0);delete examState.remaining}
+ else examState={answers:Array(examQuestions.length).fill(null),index:0,end:Date.now()+25*60*1000};
+ $('examResults').classList.add('hide');$('examWorkspace').classList.remove('hide');$('examResume').style.display='none';$('examStart').textContent='Restart assessment';examRender();examTick();
+ if(examTimer)clearInterval(examTimer);examTimer=setInterval(examTick,1000);
+}
+function examPersist(){if(!examState)return;const copy={...examState,remaining:Math.max(0,examState.end-Date.now())};delete copy.end;localStorage.setItem('fm_exam_attempt',JSON.stringify(copy))}
+function examTick(){if(!examState)return;const ms=Math.max(0,examState.end-Date.now()),sec=Math.ceil(ms/1000);$('examClock').textContent=String(Math.floor(sec/60)).padStart(2,'0')+':'+String(sec%60).padStart(2,'0');if(ms<=0)examSubmit(true)}
+function examRender(){
+ const q=examQuestions[examState.index],chosen=examState.answers[examState.index];
+ $('examProgress').textContent='Question '+(examState.index+1)+' of '+examQuestions.length+' · 2 marks';
+ $('examAnswered').textContent=examState.answers.filter(x=>x!==null).length+' of '+examQuestions.length+' answered';
+ $('examBar').style.width=(examState.answers.filter(x=>x!==null).length/examQuestions.length*100)+'%';
+ $('examQuestion').innerHTML='<h3 style="font-size:19px;margin:22px 0">'+q.q+'</h3>';
+ $('examOptions').innerHTML=q.o.map((v,i)=>'<button class="quizopt '+(chosen===i?'correct':'')+'" data-answer="'+i+'">'+String.fromCharCode(65+i)+'. '+v+'</button>').join('');
+ $('examOptions').querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>{examState.answers[examState.index]=Number(b.dataset.answer);examPersist();examRender()}));
+ $('examPrev').disabled=examState.index===0;$('examNext').disabled=examState.index===examQuestions.length-1;
+}
+function examSubmit(auto=false){
+ if(!examState)return;if(examTimer)clearInterval(examTimer);examTimer=null;
+ const answers=examState.answers.slice(),marks=answers.reduce((n,a,i)=>n+(a===examQuestions[i].a?2:0),0),pct=marks/(examQuestions.length*2)*100;
+ localStorage.removeItem('fm_exam_attempt');const old=Number(localStorage.getItem('fm_exam_best')||0);if(pct>old)localStorage.setItem('fm_exam_best',String(pct));
+ $('examWorkspace').classList.add('hide');$('examResults').classList.remove('hide');
+ $('examResults').innerHTML='<div class="eyebrow">Assessment submitted'+(auto?' · Time expired':'')+'</div><h3 style="font-size:28px">Result: '+marks+' / 20</h3><p class="muted">Accuracy: '+pct.toFixed(0)+'% · '+answers.filter(x=>x===null).length+' unanswered</p><div class="bar"><i style="width:'+pct+'%"></i></div><h3>Answer review</h3>'+examQuestions.map((q,i)=>'<div style="border-top:1px solid var(--line);padding:13px 0"><b>Q'+(i+1)+'. '+(answers[i]===q.a?'Correct · 2/2':'Incorrect or unanswered · 0/2')+'</b><p class="muted">'+q.q+'</p><p style="color:var(--teal)">Correct answer: '+q.o[q.a]+'</p><p class="muted">'+q.e+'</p></div>').join('')+'<button class="btn primary" id="examAgain">Start another attempt</button>';
+ $('examAgain').addEventListener('click',()=>examStart(false));examState=null;examBest();
+}
+$('examStart').addEventListener('click',()=>examStart(false));
+$('examResume').addEventListener('click',()=>examStart(true));
+$('examPrev').addEventListener('click',()=>{if(examState&&examState.index>0){examState.index--;examPersist();examRender()}});
+$('examNext').addEventListener('click',()=>{if(examState&&examState.index<examQuestions.length-1){examState.index++;examPersist();examRender()}});
+$('examSubmit').addEventListener('click',()=>{if(confirm('Submit this assessment now? You cannot change answers after submission.'))examSubmit(false)});
+const savedExam=examSaved();if(savedExam){$('examResume').style.display='inline-block';$('examStart').textContent='Start new attempt (discard saved attempt)'}
+examBest();
 
 renderTopics();renderCalcs();renderQ();initVisuals();$('statScore').textContent=localStorage.getItem('fm_score')?localStorage.getItem('fm_score')+'%':'—';
 </script>
