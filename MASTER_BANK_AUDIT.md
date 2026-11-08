@@ -21,8 +21,8 @@ The answer key must be checked before any item is used for automatic marking. Th
 1. Q16 — one sign change in a conventional cashflow sequence can establish at most one positive IRR under the usual polynomial conditions; it does not guarantee that a positive IRR exists. State existence separately.
 2. Q86 — from 100v + 100v² = 180, the positive root is v = (-1 + √8.2)/2 ≈ 0.93178. The supplied answer 0.923 is inaccurate.
 3. Q131 — C_t = P v^(n-t+1) is valid for a level-payment loan under the stated periodic-rate and end-of-period-payment convention. It is not general for variable instalments.
-4. Q136 — immediately after payment t, the prospective balance is the PV of the remaining n-t payments; immediately before that payment, the count differs.
-5. Q143 — the recurrence depends on the timing convention and on C_t denoting principal repaid at the end of period t. Keep definitions beside the formula.
+4. Q132–133 — immediately after payment t, the prospective balance is the PV of the remaining n-t payments; immediately before that payment, the count differs. State the valuation instant explicitly.
+5. Q149–150 — the recurrences for capital repayments and interest components depend on the timing convention and on C_t denoting principal repaid at the end of period t. Keep definitions beside the formulas.
 6. Q162 — in common market usage, a clean or flat bond price excludes accrued coupon interest, while a dirty/full price includes it. The supplied answer appears to reverse this convention.
 7. Q165 — the displayed Makeham expression is not safely stated. Under a level-coupon bond convention with redemption C, coupon rate g per period and yield i per period, a standard rearrangement is P = Cg/i + C(1 - g/i)v^n. Define units and coupon timing.
 8. Q170 — D_mod = D_mac/(1+i) applies to annual effective yield with annual cashflow periods. For other coupon frequencies, the denominator must reflect yield per coupon period and duration units.
