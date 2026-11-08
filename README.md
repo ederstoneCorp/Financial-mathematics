@@ -17,10 +17,13 @@ Then visit `http://localhost:8000`.
 ## Current features
 
 - Responsive course dashboard and module navigation
-- Nine structured learning modules with original explanations and formulas
+- Eleven structured learning modules with original explanations and formulas
 - Interactive calculators for simple interest, compound accumulation/present value, nominal-to-effective conversion, annuities, loan amortisation, annual-coupon bond valuation and straight-line depreciation
 - Loan repayment schedule with monthly interest, principal and outstanding balance
 - Formula reference, learning pathway, local progress tracking and an eight-question knowledge check
+- Expanded `STUDY_GUIDE.md` with derivations, worked examples and practice checkpoints
+- `PRACTICE_BANK.md` with 20 original graded questions and worked solutions
+- `COURSE_SCOPE.md` with the working topic map and CT1 filtering decisions
 - Kenyan shilling examples and financial contexts
 
 ## Academic scope and source handling
