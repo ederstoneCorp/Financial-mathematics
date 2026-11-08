@@ -409,3 +409,419 @@ window.masterQuestionBank = {
     ]
   ]
 };
+
+/* Master SMA 2207 question bank, modules 5–8. */
+Object.assign(window.masterQuestionBank,{
+  "annuities": [
+    [
+      "Define annuity-immediate.",
+      "Equal payments at each period-end."
+    ],
+    [
+      "Give PV of unit annuity-immediate for n periods.",
+      "a-angle-n=(1-v^n)/i."
+    ],
+    [
+      "Define annuity-due.",
+      "Equal payments at each period-beginning."
+    ],
+    [
+      "Give PV of annuity-due.",
+      "ä-angle-n=(1-v^n)/d=(1+i)a-angle-n."
+    ],
+    [
+      "Give accumulated value of annuity-immediate.",
+      "s-angle-n=((1+i)^n-1)/i=(1+i)^n a-angle-n."
+    ],
+    [
+      "Give accumulated value of annuity-due.",
+      "s-double-dot-angle-n=((1+i)^n-1)/d=(1+i)^n ä-angle-n."
+    ],
+    [
+      "Define perpetuity.",
+      "An annuity whose payments continue indefinitely."
+    ],
+    [
+      "Give PV of unit perpetuity-immediate.",
+      "1/i."
+    ],
+    [
+      "Give PV of unit perpetuity-due.",
+      "1/d."
+    ],
+    [
+      "Find PV of KSh 10,000 yearly for five years at 12%, paid in arrears.",
+      "10,000[1-(1.12)^(-5)]/0.12≈KSh 36,047.76."
+    ],
+    [
+      "Find accumulated value at year 5 of that annuity.",
+      "10,000[(1.12)^5-1]/0.12≈KSh 63,529.??; use the exact annuity accumulation formula."
+    ],
+    [
+      "Define an increasing annuity with payments 1,2,…,n.",
+      "An annuity-immediate whose payment in period t is t; value is Σt v^t."
+    ],
+    [
+      "Define a decreasing annuity with payments n,n-1,…,1.",
+      "An annuity-immediate whose payments decrease by one each period; value is the discounted sum of those payments."
+    ],
+    [
+      "Define deferred annuity.",
+      "An annuity whose first payment begins after a specified deferment period."
+    ],
+    [
+      "Give PV of an m-deferred n-payment annuity-immediate.",
+      "v^m a-angle-n=a-angle-(m+n)-a-angle-m, under the stated timing convention."
+    ],
+    [
+      "Define annuity payable m-thly.",
+      "Payments are made m times yearly, often 1/m each time so they total 1 per year."
+    ],
+    [
+      "Give standard PV formula for an annuity payable m-thly.",
+      "a-angle-n^(m)=(1-v^n)/i^(m), under the stated payment and timing convention."
+    ],
+    [
+      "Find PV of KSh 50,000 yearly perpetuity-immediate at 10%.",
+      "50,000/0.10=KSh 500,000."
+    ],
+    [
+      "Relate annuity-due and annuity-immediate PVs.",
+      "ä-angle-n=(1+i)a-angle-n."
+    ],
+    [
+      "Relate accumulated annuity-due and annuity-immediate values.",
+      "s-double-dot-angle-n=(1+i)s-angle-n."
+    ],
+    [
+      "If a-angle-10 at 8% is 6.7101, find s-angle-10.",
+      "6.7101(1.08)^10≈14.4866."
+    ],
+    [
+      "Define continuous annuity.",
+      "Payments made continuously at a constant rate."
+    ],
+    [
+      "Give PV of continuous unit annuity for n years at force δ.",
+      "ā-angle-n=(1-e^(-δn))/δ."
+    ],
+    [
+      "Why are annuities important in pension mathematics and mortgages?",
+      "They model regular periodic payments such as pension benefits, premiums and loan instalments."
+    ],
+    [
+      "Verify d ä-angle-n=1-v^n.",
+      "True, since ä-angle-n=(1-v^n)/d."
+    ]
+  ],
+  "loans": [
+    [
+      "Define loan amortisation.",
+      "Gradual repayment and extinction of a loan through periodic payments."
+    ],
+    [
+      "Give level payment to amortise loan L over n periods at rate i.",
+      "P=L/a-angle-n."
+    ],
+    [
+      "What are the two components of an amortisation payment?",
+      "Interest and capital repayment."
+    ],
+    [
+      "Relate payment, interest and capital repayment in period t.",
+      "P_t=I_t+C_t."
+    ],
+    [
+      "How is period-t interest calculated?",
+      "I_t=B_(t-1)i, where B_(t-1) is the balance at the start of the period."
+    ],
+    [
+      "How is capital repayment calculated for a level-payment loan?",
+      "C_t=P-I_t; with end-period level payments C_t=P v^(n-t+1)."
+    ],
+    [
+      "Give prospective outstanding balance after payment t.",
+      "B_t=P a-angle-(n-t)."
+    ],
+    [
+      "Give retrospective outstanding balance after payment t.",
+      "B_t=L(1+i)^t-P s-angle-t."
+    ],
+    [
+      "Find annual payment on KSh 1,000,000 over five years at 15%.",
+      "P=1,000,000/a-angle-5 at 15%; calculate using full precision (approximately KSh 298,315)."
+    ],
+    [
+      "Find first-year interest on KSh 1,000,000 at 15%.",
+      "1,000,000×0.15=KSh 150,000."
+    ],
+    [
+      "Find first-year capital repayment if payment is KSh 298,311.56.",
+      "298,311.56-150,000=KSh 148,311.56."
+    ],
+    [
+      "Find balance after first payment if capital repaid is KSh 148,311.56.",
+      "1,000,000-148,311.56=KSh 851,688.44."
+    ],
+    [
+      "How do you verify B1 prospectively?",
+      "B1=P a-angle-4 at 15%, using unrounded payment and annuity factors."
+    ],
+    [
+      "Define amortisation schedule.",
+      "A table showing each payment, interest, capital repaid and remaining balance."
+    ],
+    [
+      "How do capital repayments change in a level-payment schedule?",
+      "They increase as the interest component declines."
+    ],
+    [
+      "How do interest components change in a level-payment schedule?",
+      "They decrease as the outstanding balance reduces."
+    ],
+    [
+      "Define variable repayment loan.",
+      "A loan with non-level payments, e.g. constant principal repayments plus declining interest."
+    ],
+    [
+      "Give period-t payment for constant principal repayment C=L/n.",
+      "P_t=L/n+[L-(t-1)L/n]i."
+    ],
+    [
+      "Define rounding adjustment in a loan schedule.",
+      "A small adjustment, often to the final instalment, to account for currency rounding."
+    ],
+    [
+      "Define loan refinancing.",
+      "Replacing an existing loan with a new agreement, potentially at a different rate or term."
+    ],
+    [
+      "Give balance after three years on KSh 500,000 amortised over ten years at 12%.",
+      "B3=(500,000/a-angle-10)×a-angle-7; compute with exact factors and consistent timing."
+    ],
+    [
+      "Define early loan redemption.",
+      "Repaying the outstanding loan balance before scheduled maturity."
+    ],
+    [
+      "Why may lenders charge early redemption penalties?",
+      "To compensate for contractual costs or expected lost interest, subject to law and the agreement."
+    ],
+    [
+      "Relate consecutive capital repayments in a level-payment loan.",
+      "C_(t+1)=C_t(1+i)."
+    ],
+    [
+      "Relate consecutive interest components.",
+      "I_(t+1)=I_t-iC_t=I_t(1+i)-iP."
+    ]
+  ],
+  "sinking": [
+    [
+      "Define sinking fund.",
+      "A fund built through periodic deposits and investment returns to meet a future liability."
+    ],
+    [
+      "Distinguish amortisation from a sinking-fund loan.",
+      "Amortisation repays principal in instalments; a sinking-fund loan may pay interest while principal is accumulated separately for maturity."
+    ],
+    [
+      "Give annual total cost of sinking-fund borrowing L at loan rate i and fund rate j over n years.",
+      "Li+L/s-angle-n at rate j."
+    ],
+    [
+      "Define bond.",
+      "A debt security promising coupon payments and a redemption payment."
+    ],
+    [
+      "Define bond coupon rate g.",
+      "The rate applied to nominal/par value to determine coupon payments."
+    ],
+    [
+      "Define redemption value C.",
+      "The amount paid to the bondholder at redemption or maturity."
+    ],
+    [
+      "Give price of bond redeemable at C after n periods with coupon Cg and yield i.",
+      "P=Cg a-angle-n+C v^n."
+    ],
+    [
+      "When is a bond purchased at a premium?",
+      "When its price exceeds redemption value; normally coupon rate exceeds comparable yield."
+    ],
+    [
+      "When is a bond purchased at a discount?",
+      "When its price is below redemption value; normally coupon rate is below comparable yield."
+    ],
+    [
+      "Price KSh 100,000 bond, five years, 14% annual coupon, 12% yield, redeemed at par.",
+      "P=14,000a-angle-5 at 12%+100,000(1.12)^(-5)≈KSh 107,209.9."
+    ],
+    [
+      "Is the bond in the previous question at premium or discount?",
+      "Premium: price exceeds KSh 100,000 and coupon rate exceeds yield."
+    ],
+    [
+      "Define clean or flat bond price.",
+      "Quoted price excluding accrued interest."
+    ],
+    [
+      "Define dirty or full bond price.",
+      "Settlement price including accrued interest; clean price plus accrued interest."
+    ],
+    [
+      "Define ex-coupon bond price.",
+      "Price under market rules where the buyer is not entitled to the next coupon; not a universal synonym for clean price."
+    ],
+    [
+      "Define yield to maturity.",
+      "The yield equating bond price to PV of its remaining coupons and redemption payment."
+    ],
+    [
+      "State a standard Makeham-style bond valuation identity.",
+      "P=Cg a-angle-n+C v^n; rearrangements depend on definitions and assumptions."
+    ],
+    [
+      "Define index-linked bond.",
+      "A bond whose coupon and/or redemption amounts are adjusted by an inflation index."
+    ],
+    [
+      "Define Macaulay duration.",
+      "The present-value-weighted average time of a bond's cashflows."
+    ],
+    [
+      "Give Macaulay duration formula.",
+      "D_mac=Σ[t C_t v^t]/Σ[C_t v^t], with consistent time units."
+    ],
+    [
+      "Define modified duration.",
+      "A measure of price sensitivity; for annual effective yield D_mod=D_mac/(1+i)."
+    ],
+    [
+      "Relate percentage price change to modified duration.",
+      "ΔP/P≈-D_mod Δi for a small yield change under matching conventions."
+    ],
+    [
+      "Define convexity.",
+      "A measure of curvature in the bond price-yield relationship."
+    ],
+    [
+      "Define Kenyan Treasury bills.",
+      "Short-term Government of Kenya securities, commonly issued with 91-, 182- and 364-day maturities."
+    ],
+    [
+      "Give T-bill price under investment-yield and discount-yield conventions.",
+      "Investment yield: P=FV/[1+r(t/365)]. Discount yield: P=FV[1-d(t/365)]. State convention and day-count basis."
+    ],
+    [
+      "Price a 182-day KSh 1,000,000 T-bill at 15% annual discount yield.",
+      "1,000,000[1-0.15(182/365)]≈KSh 925,205.48."
+    ],
+    [
+      "Why do institutions use sinking funds?",
+      "To accumulate resources systematically for future debt redemption or replacement liabilities."
+    ]
+  ],
+  "depreciation": [
+    [
+      "Define depreciation.",
+      "Systematic allocation of an asset's depreciable cost over its useful life."
+    ],
+    [
+      "Give annual straight-line depreciation.",
+      "D=(C-S)/n."
+    ],
+    [
+      "Find straight-line depreciation for cost 600,000, scrap 60,000, life six years.",
+      "(600,000-60,000)/6=KSh 90,000 yearly."
+    ],
+    [
+      "Give reducing-balance book value.",
+      "W_t=C(1-d)^t."
+    ],
+    [
+      "Find reducing-balance rate from cost C, scrap S and life n.",
+      "d=1-(S/C)^(1/n)."
+    ],
+    [
+      "Find rate for C=500,000, S=50,000, n=5.",
+      "1-(0.1)^(1/5)≈36.90%."
+    ],
+    [
+      "Define sinking-fund depreciation.",
+      "A method accumulating deposits and fund interest to replace the depreciable amount."
+    ],
+    [
+      "Give annual sinking-fund depreciation deposit.",
+      "D=(C-S)/s-angle-n=(C-S)i/[(1+i)^n-1]."
+    ],
+    [
+      "Define capital gain or loss on disposal.",
+      "Net disposal proceeds minus book value at disposal."
+    ],
+    [
+      "Define portfolio yield.",
+      "A yield measure equating portfolio price to projected portfolio cashflows; it is not generally a simple weighted average of individual yields."
+    ],
+    [
+      "Define immunisation.",
+      "Structuring assets and liabilities so surplus is protected against specified small interest-rate movements."
+    ],
+    [
+      "State classical Redington immunisation conditions.",
+      "PV assets=PV liabilities; durations match; asset convexity/dispersion exceeds liability convexity/dispersion under the model."
+    ],
+    [
+      "Define stochastic interest-rate model.",
+      "A model treating future rates as random variables or stochastic processes."
+    ],
+    [
+      "Define deterministic interest-rate model.",
+      "A model in which future rates are specified rather than random."
+    ],
+    [
+      "Define force of mortality μ_x.",
+      "Instantaneous rate of death at age x, conditional on survival to that age."
+    ],
+    [
+      "Express survival probability using force of mortality.",
+      "{}_t p_x=exp[-∫₀ᵗ μ_(x+s)ds]."
+    ],
+    [
+      "Define endowment assurance.",
+      "A life policy paying on death during a term or on survival to the term's end."
+    ],
+    [
+      "Give annual whole-life annuity-due symbol and expression.",
+      "ä_x=Σ from t=0 to infinity of v^t·{}_t p_x, under annual payment convention."
+    ],
+    [
+      "Define net premium.",
+      "Premium based on expected benefits using mortality and interest assumptions, before expense loadings."
+    ],
+    [
+      "Define gross premium.",
+      "Net premium plus expense and other loadings."
+    ],
+    [
+      "Define policy reserve at duration t.",
+      "Prospective value of future benefits less prospective value of future premiums, under the valuation basis."
+    ],
+    [
+      "State Thiele's differential equation conceptually.",
+      "The reserve derivative combines interest accumulation, premium cashflows and mortality-related benefit jumps; exact signs depend on the reserve convention."
+    ],
+    [
+      "Give symbol for term assurance of 1 payable at end of year of death within n years.",
+      "A^1_(x:n), or equivalent notation as defined by the course."
+    ],
+    [
+      "Why is financial mathematics important for actuarial solvency testing?",
+      "It supports quantitative valuation of assets and uncertain liabilities and tests adequacy of capital."
+    ],
+    [
+      "Why is SMA 2207 relevant to maths and computer science students?",
+      "It develops quantitative modelling, discounting, cashflow and optimisation skills used in finance, fintech and actuarial analytics."
+    ]
+  ]
+});
