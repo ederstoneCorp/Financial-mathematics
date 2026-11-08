@@ -17,10 +17,11 @@ Then visit `http://localhost:8000`.
 ## Current features
 
 - Responsive course dashboard and module navigation
-- Eleven structured learning modules with original explanations and formulas
-- Interactive calculators for simple interest, compound accumulation/present value, nominal-to-effective conversion, annuities, loan amortisation, annual-coupon bond valuation and straight-line depreciation
+- Structured core modules covering cashflows, interest models, rate conversion, discounting, annuities, equations of value, loans, sinking funds, continuous cashflows and short-term investment returns
+- Seven interactive calculators for simple interest, compound accumulation/present value, nominal-to-effective conversion, annuities, monthly loan amortisation, sinking funds and continuous payment streams
 - Loan repayment schedule with monthly interest, principal and outstanding balance
 - Formula reference, learning pathway, local progress tracking and an eight-question knowledge check
+- A 25-minute, 20-mark exam simulator with answer navigation, automatic submission, worked explanations, saved in-progress attempts and a locally stored best score
 - Expanded `STUDY_GUIDE.md` with derivations, worked examples and practice checkpoints
 - `PRACTICE_BANK.md` with 20 original graded questions and worked solutions
 - `COURSE_SCOPE.md` with the working topic map and CT1 filtering decisions
@@ -38,8 +39,8 @@ The platform does not reproduce the ActEd pack or its question bank. Explanation
 
 - No build step or package installation is required.
 - The interface is implemented in plain HTML, CSS and JavaScript.
-- Progress and the latest quiz score are stored in browser local storage.
-- The current calculators use stated assumptions. In particular, the bond calculator is an annual-coupon model; the loan calculator assumes monthly repayments and a nominal annual rate convertible monthly.
+- Module progress, the latest quiz score, saved exam attempts and the best exam result are stored in browser local storage.
+- The loan calculator assumes monthly repayments and a nominal annual rate convertible monthly. The continuous-stream calculator assumes a constant force of interest and a constant payment rate.
 - Charting and additional visual simulations can be added in subsequent iterations.
 
 ## Next development priorities
@@ -47,5 +48,5 @@ The platform does not reproduce the ActEd pack or its question bank. Explanation
 1. Reconcile the working module list with the official JKUAT course outline and lecturer's teaching sequence.
 2. Expand each module with more worked examples, derivations, visual timelines and targeted exercises.
 3. Add interactive cashflow timelines, annuity visualisations and growth charts.
-4. Add more comprehensive practice sets and timed assessment modes.
+4. Expand the exam simulator with additional original question sets, mixed question formats and lecturer-aligned mark schemes.
 5. Validate every numerical example and calculator against independently calculated test cases.
