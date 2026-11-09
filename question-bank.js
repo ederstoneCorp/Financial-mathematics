@@ -409,7 +409,6 @@ window.masterQuestionBank = {
     ]
   ]
 };
-
 /* Master SMA 2207 question bank, modules 5–8. */
 Object.assign(window.masterQuestionBank,{
   "annuities": [
@@ -664,10 +663,6 @@ Object.assign(window.masterQuestionBank,{
     [
       "Define clean or flat bond price.",
       "Quoted price excluding accrued interest."
-    ],
-    [
-      "Define dirty or full bond price.",
-      "Settlement price including accrued interest; clean price plus accrued interest."
     ],
     [
       "Define ex-coupon bond price.",
