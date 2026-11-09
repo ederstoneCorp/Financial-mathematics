@@ -6,7 +6,8 @@ type User={id:string;name:string;email:string;role:string};
 type Progress={completed:string[];revealed:string[];review:string[];attempts:{type:string;module:string;total:number;correct:number;date:string}[];points:number;streak:number;tasks:{id:string;text:string;done:boolean;date:string}[];lastActive:string};
 const EMPTY:Progress={completed:[],revealed:[],review:[],attempts:[],points:0,streak:0,tasks:[],lastActive:""};
 const NAV=[["Overview","⌂"],["My learning","▤"],["Practice","✓"],["RAT assessments","◷"],["CAT assessments","▣"],["Revision centre","↻"],["Formula library","π"],["Calculator studio","∑"],["Visual laboratory","⌁"],["Analytics","▥"],["Calendar & tasks","▦"],["Subscription","★"],["Settings","⚙"]];
-const localDay=(date=new Date())=>date.getFullYear()+"-"+String(date.getMonth()+1).padStart(2,"0")+"-"+String(date.getDate()).padStart(2,"0");\nconst fmt=(n:number)=>new Intl.NumberFormat("en-KE",{maximumFractionDigits:2}).format(n);
+const localDay=(date=new Date())=>date.getFullYear()+"-"+String(date.getMonth()+1).padStart(2,"0")+"-"+String(date.getDate()).padStart(2,"0");
+const fmt=(n:number)=>new Intl.NumberFormat("en-KE",{maximumFractionDigits:2}).format(n);
 function App(){
  const [user,setUser]=useState<User|null>(null),[authMode,setAuthMode]=useState<"login"|"register"|"admin">("login"),[authError,setAuthError]=useState(""),[authBusy,setAuthBusy]=useState(false);
  const [name,setName]=useState(""),[email,setEmail]=useState(""),[password,setPassword]=useState("");
