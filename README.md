@@ -1,58 +1,86 @@
 # SMA 2207 Financial Mathematics I
 
-A browser-based interactive textbook and calculation laboratory for the JKUAT SMA 2207 learning pathway.
+A full-stack, responsive learning platform for JKUAT SMA 2207, built using the architecture pattern established in EderStone Corp's Eugine's Biology learning platform.
+
+## Architecture
+
+- **Frontend:** React 19, TypeScript and Vite.
+- **API:** Node.js and Express 5.
+- **Database:** PostgreSQL, provisioned through the Render Blueprint.
+- **Authentication:** email/password accounts, bcrypt password hashing, signed JWT sessions and role-based administrator access.
+- **Persistence:** learner progress is stored locally for immediate use and synchronised to PostgreSQL when authenticated.
+- **Deployment:** Render Node web service serves the Vite production build and API from one origin.
+- **CI:** GitHub Actions runs the TypeScript/Vite production build on pushes and pull requests.
+
+## Learner features
+
+- Personal learner accounts and sign-in.
+- Dashboard with module completion, points, streak, assessment history and learning activity.
+- Eight course modules mapped to the supplied 200-question bank.
+- Module overview, key formulas and access to the complete study guide.
+- Untimed topic-focused practice. Learners choose a module, navigate its questions, reveal solutions and flag questions for revision.
+- RAT and CAT self-marked assessment workflows, with question selection and saved result history.
+- Revision centre for flagged questions.
+- Formula library.
+- Seven calculation models plus discounting: simple interest, compound accumulation, nominal/effective conversion, annuity PV, monthly loan instalment, sinking-fund deposit, continuous payment stream and compound discounting.
+- Floating calculator that remains available while studying.
+- Visual laboratory with compound-growth comparison and a cashflow timeline.
+- Analytics for assessment performance and printable reports.
+- Calendar and study-task planner.
+- Points, streaks and achievement milestones.
+- Dark/light appearance settings.
+- Subscription request workflow.
+
+## Administrator foundations
+
+- Separate administrator sign-in using the ADMIN_PASSWORD environment variable.
+- Learner account list and high-level learner/assessment/subscription-request counts.
+- Ability to activate or deactivate learner subscription access.
 
 ## Run locally
 
-This is a static site. Open `index.html` in a browser, or serve the repository root with any static file server.
-
-For example:
+Requirements: Node.js 20 or later and PostgreSQL.
 
 ```bash
-python -m http.server 8000
+npm install
+npm run dev
 ```
 
-Then visit `http://localhost:8000`.
+The Vite development server runs the frontend. For API-backed local testing, set the environment variables below and run the API separately:
 
-## Current features
+```bash
+npm run server
+```
 
-- Responsive course dashboard and module navigation
-- Structured core modules covering cashflows, interest models, rate conversion, discounting, annuities, equations of value, loans, sinking funds, continuous cashflows and short-term investment returns
-- Seven interactive calculators for simple interest, compound accumulation/present value, nominal-to-effective conversion, annuities, monthly loan amortisation, sinking funds and continuous payment streams
-- Loan repayment schedule with monthly interest, principal and outstanding balance
-- Formula reference, learning pathway, local progress tracking and an eight-question knowledge check
-- Untimed topic-based practice: learners choose one of the 10 course topics and work through topic-specific questions at their own pace
-- Floating calculator available throughout the learning platform, with selectable simple-interest, compound-interest, rate-conversion, annuity, loan, sinking-fund and continuous-stream models
-- Expanded `STUDY_GUIDE.md` with derivations, worked examples and practice checkpoints
-- `PRACTICE_BANK.md` with 20 original graded questions and worked solutions
-- `COURSE_SCOPE.md` with the working topic map and CT1 filtering decisions
-- Kenyan shilling examples and financial contexts
+## Environment variables
 
-## Academic scope and source handling
+| Variable | Purpose |
+|---|---|
+| DATABASE_URL | PostgreSQL connection string |
+| JWT_SECRET | Secret used to sign learner and administrator sessions |
+| ADMIN_PASSWORD | Administrator password; set a strong unique value in Render |
+| CLIENT_ORIGIN | Optional comma-separated list of allowed browser origins |
+| NODE_ENV | Set to production on Render |
 
-The supplied 800-page PDF is an ActEd CT1 Combined Materials Pack for the 2013 examinations. It is not a JKUAT SMA 2207 course outline. The platform therefore uses the previously discussed SMA 2207 working topic scope as its organising structure and selectively consults relevant CT1 material for explanations and mathematical foundations.
+Do not commit real secrets or database credentials.
 
-The current working core includes cashflow models, time value of money, interest and discount rates, real and money rates, discounting and accumulation, annuities, equations of value, and loan repayment. Bonds, project appraisal and depreciation are labelled as applied or scope-dependent content pending confirmation against the lecturer's official coverage.
+## Render deployment
 
-The platform does not reproduce the ActEd pack or its question bank. Explanations, examples, quizzes and calculator implementations are original. Do not treat supplementary topics as examinable solely because they appear in the CT1 pack.
+The root render.yaml defines a Node web service and a PostgreSQL database. Review the Blueprint in Render before applying it. The first deployment requires Render to provision the database and configure the secret environment variables. The web service health check is /api/health.
 
-## Technical notes
+The Blueprint does not imply that a service or database has already been provisioned. Check the Render dashboard after syncing the Blueprint.
 
-- No build step or package installation is required.
-- The interface is implemented in plain HTML, CSS and JavaScript.
-- Module progress, the latest quiz score, saved exam attempts and the best exam result are stored in browser local storage.
-- The loan calculator assumes monthly repayments and a nominal annual rate convertible monthly. The continuous-stream calculator assumes a constant force of interest and a constant payment rate.
-- Charting and additional visual simulations can be added in subsequent iterations.
+## Question-bank and academic scope
 
-## Next development priorities
+The practice bank contains 200 supplied questions arranged as eight modules of 25. It is a revision resource, not a verified official JKUAT examination blueprint. The supplementary actuarial topics in Module 8 and some bond topics should be checked against the lecturer's official coverage.
 
-1. Reconcile the working module list with the official JKUAT course outline and lecturer's teaching sequence.
-2. Expand each module with more worked examples, derivations, visual timelines and targeted exercises.
-3. Add interactive cashflow timelines, annuity visualisations and growth charts.
-4. Expand worked explanations and add mixed revision sets while preserving the 200-question module structure.
-5. Validate every numerical example and calculator against independently calculated test cases.
+The supplied answer key has been reviewed for selected mathematical and terminology issues. Continue validating numerical answers and conventions before using the bank as a formal marking scheme. The complete question data is in question-bank.js; the audit is in MASTER_BANK_AUDIT.md.
 
+The original single-page laboratory has been retained at legacy-lab.html during the architecture migration. It can be removed after the React implementation has been fully checked against the previous calculators, learning content and visualisations.
 
-## Master question practice
+## Current implementation boundaries
 
-The untimed practice area uses the supplied 200-question SMA 2207 master bank, organised into eight modules of 25 questions each (Q1–Q200). Learners select a module, navigate its questions, attempt each question before revealing the supplied answer or solution, and use the floating calculator without leaving the practice screen. The supplied answer key has been mathematically reviewed; corrections and convention-dependent items are identified in the question-bank data and audit notes. The bank is a revision resource, not a verified official JKUAT examination blueprint.
+- The learner progress API persists the platform's current progress object. The frontend keeps a local copy for resilience.
+- RAT/CAT are currently self-marked study assessments, not institutionally scheduled or automatically graded examinations.
+- Subscription requests and administrator access toggles are present; payment processing, email verification, password-reset email delivery and automated subscription-key fulfilment still require provider configuration and additional implementation.
+- The platform build has not yet been verified on the live Render service.
