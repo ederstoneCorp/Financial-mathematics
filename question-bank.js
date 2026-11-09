@@ -329,7 +329,7 @@ window.masterQuestionBank = {
     ],
     [
       "Find PV of KSh 50,000 due in three years at force 0.09.",
-      "50,000e^(-0.27)≈KSh 38,157.??; evaluate using full precision."
+      "50,000e^(-0.27)≈KSh 38,168.97."
     ],
     [
       "Define discounting.",
@@ -341,7 +341,7 @@ window.masterQuestionBank = {
     ],
     [
       "Find NPV for outlay KSh 150,000 now and KSh 200,000 in three years at 11%.",
-      "-150,000+200,000/(1.11)^3≈-KSh 3,788.77."
+      "-150,000+200,000/(1.11)^3≈-KSh 3,761.72."
     ],
     [
       "Is the previous investment attractive on NPV grounds?",
@@ -455,7 +455,7 @@ Object.assign(window.masterQuestionBank,{
     ],
     [
       "Find accumulated value at year 5 of that annuity.",
-      "10,000[(1.12)^5-1]/0.12≈KSh 63,529.??; use the exact annuity accumulation formula."
+      "10,000[(1.12)^5-1]/0.12≈KSh 63,528.47."
     ],
     [
       "Define an increasing annuity with payments 1,2,…,n.",
@@ -549,7 +549,7 @@ Object.assign(window.masterQuestionBank,{
     ],
     [
       "Find annual payment on KSh 1,000,000 over five years at 15%.",
-      "P=1,000,000/a-angle-5 at 15%; calculate using full precision (approximately KSh 298,315)."
+      "P=1,000,000/a-angle-5 at 15%; calculate using full precision (KSh 298,315.55."
     ],
     [
       "Find first-year interest on KSh 1,000,000 at 15%.",
@@ -597,7 +597,7 @@ Object.assign(window.masterQuestionBank,{
     ],
     [
       "Give balance after three years on KSh 500,000 amortised over ten years at 12%.",
-      "B3=(500,000/a-angle-10)×a-angle-7; compute with exact factors and consistent timing."
+      "B3=(500,000/a-angle-10)×a-angle-7; ≈KSh 403,856.32 using the prospective method."
     ],
     [
       "Define early loan redemption.",
