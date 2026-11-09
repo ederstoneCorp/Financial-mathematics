@@ -44,11 +44,11 @@ The answer key must be checked before any item is used for automatic marking. Th
 - Do not describe this bank as an official JKUAT paper or lecturer-issued question bank.
 
 ## Recommended assessment design
-1. Topic practice: select questions from one module, with worked solutions and unlimited attempts.
+1. Topic practice: select one of the eight master-bank modules (25 questions each), with unlimited time and answer reveal.
 2. Mixed revision: draw a balanced set across core modules, including conceptual and computational items.
-3. Timed mock: configurable duration, marks, navigation, saved progress and automatic submission.
+3. Untimed mixed revision: draw a balanced set across modules, with optional self-marking and worked solutions.
 4. Review mode: show learner response, reviewed answer, working, topic tag and explanation.
 5. Progress analytics: report marks by topic, calculation versus concept performance, and recurring errors.
 6. Supplementary mode: make bond, depreciation and actuarial extension questions available separately.
 
-The bank should be converted and verified in batches. A question should not enter auto-marked timed assessments until its answer and marking logic have been checked.
+The 200-question bank is now integrated into the untimed practice interface as eight selectable modules of 25 questions each. Learners reveal the answer/solution after attempting each item; the floating calculator remains available. This interface does not impose a timer or auto-submit. The question bank is a revision resource, not a verified official JKUAT examination blueprint. Numerical answers and convention-dependent items should continue to be reviewed before being treated as authoritative marking keys.
