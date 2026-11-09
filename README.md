@@ -51,3 +51,8 @@ The platform does not reproduce the ActEd pack or its question bank. Explanation
 3. Add interactive cashflow timelines, annuity visualisations and growth charts.
 4. Expand the topic question bank with additional original questions, mixed question formats and lecturer-aligned mark schemes.
 5. Validate every numerical example and calculator against independently calculated test cases.
+
+
+## Master question practice
+
+The untimed practice area uses the supplied 200-question SMA 2207 master bank, organised into eight modules of 25 questions each (Q1–Q200). Learners select a module, navigate its questions, attempt each question before revealing the supplied answer or solution, and use the floating calculator without leaving the practice screen. The supplied answer key has been mathematically reviewed; corrections and convention-dependent items are identified in the question-bank data and audit notes. The bank is a revision resource, not a verified official JKUAT examination blueprint.
