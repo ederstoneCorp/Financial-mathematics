@@ -49,7 +49,7 @@ The platform does not reproduce the ActEd pack or its question bank. Explanation
 1. Reconcile the working module list with the official JKUAT course outline and lecturer's teaching sequence.
 2. Expand each module with more worked examples, derivations, visual timelines and targeted exercises.
 3. Add interactive cashflow timelines, annuity visualisations and growth charts.
-4. Expand the topic question bank with additional original questions, mixed question formats and lecturer-aligned mark schemes.
+4. Expand worked explanations and add mixed revision sets while preserving the 200-question module structure.
 5. Validate every numerical example and calculator against independently calculated test cases.
 
 
